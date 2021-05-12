@@ -1,0 +1,76 @@
+.todo-list
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.tasks-list
+  padding: 10px
+  min-width: 350px
+  background: orange
+  border-radius: 10px
+
+.list-item
+  display: flex
+  align-items: center
+  padding: 10px
+  list-style-type: none
+  background: #ffd139
+  font-size: 18px
+  border-radius: 10px
+  font-weight: 600
+  cursor: pointer
+  transition: box-shadow .3s, text-decoration .3s, color .3s
+  &:hover
+    box-shadow: 0px 2px 12px 2px rgba(#000, 0.3)
+
+  &:not(:last-child)
+    margin-bottom: 10px
+
+.list-item__text
+  text-decoration: none
+  color: #000
+  transition: text-decoration .3s, color .3s
+  &--done
+    text-decoration: line-through
+    color: lightgray
+
+.remove-btn
+  align-self: flex-end
+  margin-left: auto
+  border: none
+  background: transparent
+  font-size: 16px
+  font-weight: 700
+  cursor: pointer
+  transition: color .3s, transform .3s
+  text-decoration: none !important
+  &:hover
+    color: orange
+    transform: rotate(90deg)
+
+.list-item__checkbox
+  margin-right: 15px
+
+.create-task
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.create-task__inp, .create-task__btn
+  width: 65%
+  padding: 10px
+  border-radius: 10px
+  border: none
+  background: #ffd139
+  transition: box-shadow .3s
+  font-size: 16px
+  &:focus
+    box-shadow: 0px 0px 5px 0px rgba(#000, 0.3)
+    outline: none
+
+.create-task__btn
+  width: 25%
+  cursor: pointer
+  transition: box-shadow .3s
+  &:hover
+    box-shadow: 0px 0px 5px 0px rgba(#000, 0.3)
